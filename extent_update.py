@@ -24,14 +24,14 @@ qminx = ext.xMinimum()
 qminy = ext.yMinimum()
 qmaxx = ext.xMaximum()
 qmaxy = ext.yMaximum()
-# print(qminx, qminy, qmaxx, qmaxy)
+print(qminx, qminy, qmaxx, qmaxy)
 
 # MAKE A GET REQUEST TO THE XML FILE
 username = 'admin'
 password = 'geoserver'
 response = requests.get('http://localhost:8080/geoserver/rest/workspaces/wfs_practical/datastores/wellpoints/featuretypes/WellLocation_repr.xml', auth=(username, password))
 doc = ET.fromstring(response.content)
-print(doc)
+# print(doc)
 tree = ET.ElementTree(doc)
 # print(tree[7][0].text)
 
@@ -42,16 +42,16 @@ for x in tree.findall('nativeBoundingBox'):
 
 # CHANGE THE EXTENT
 for x in tree.findall('nativeBoundingBox'):
-    x.find('minx').text = str(-180)
-    x.find('miny').text = str(-90)
-    x.find('maxx').text = str(180)
-    x.find('maxy').text = str(90)
+    x.find('minx').text = str(qminx)
+    x.find('miny').text = str(qminy)
+    x.find('maxx').text = str(qmaxx)
+    x.find('maxy').text = str(qmaxy)
 
 # PRINT THE CHANGED EXTENT
 for x in tree.findall('nativeBoundingBox'):
     # print(x.find('minx').text, x.find('miny').text, x.find('maxx').text, x.find('maxy').text)
     pass
-# tree.write('extent.xml')
+tree.write('extent.xml')
 
 
 # MAKE A PUT REQUEST TO GEOSERVER TO UPDATE THE EXTENT
@@ -59,5 +59,5 @@ tree = ET.parse('extent.xml')
 tree = tree.getroot()
 t = ET.tostring(tree)
 headers = {'Content-Type': 'application/xml'}
-# requests.put('http://localhost:8080/geoserver/rest/workspaces/wfs_practical/datastores/wellpoints/featuretypes/WellLocation_repr.xml', auth=(username, password), headers = headers, data=t)
-print(tree)
+requests.put('http://localhost:8080/geoserver/rest/workspaces/wfs_practical/datastores/wellpoints/featuretypes/WellLocation_repr.xml', auth=(username, password), headers = headers, data=t)
+# print(tree)

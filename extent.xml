@@ -20,7 +20,7 @@
     AXIS["Geodetic longitude", EAST], 
     AXIS["Geodetic latitude", NORTH], 
     AUTHORITY["EPSG","4326"]], 
-  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PROJECTION["Transverse_Mercator"], 
   PARAMETER["central_meridian", 81.0], 
   PARAMETER["latitude_of_origin", 0.0], 
   PARAMETER["scale_factor", 0.9996], 
@@ -32,21 +32,22 @@
   AUTHORITY["EPSG","32644"]]</nativeCRS>
   <srs>EPSG:32644</srs>
   <nativeBoundingBox>
-    <minx>-180</minx>
-    <maxx>180</maxx>
-    <miny>-90</miny>
-    <maxy>90</maxy>
+    <minx>181361.7510968048</minx>
+    <maxx>238973.2935611004</maxx>
+    <miny>3324875.19329384</miny>
+    <maxy>3375964.064192562</maxy>
     <crs class="projected">EPSG:32644</crs>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>74.58169775858954</minx>
-    <maxx>80.07837877388393</maxx>
-    <miny>29.888562638031175</miny>
-    <maxy>31.561191044244282</maxy>
+    <minx>76.5096434972351</minx>
+    <maxx>76.5128687364895</maxx>
+    <miny>-8.117456282619509E-4</miny>
+    <maxy>8.117456282619509E-4</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
   <enabled>true</enabled>
+  <advertised>true</advertised>
   <metadata>
     <entry key="cachingEnabled">false</entry>
   </metadata>
@@ -56,8 +57,6 @@
   </store>
   <serviceConfiguration>false</serviceConfiguration>
   <simpleConversionEnabled>false</simpleConversionEnabled>
-  <internationalTitle />
-  <internationalAbstract />
   <maxFeatures>0</maxFeatures>
   <numDecimals>0</numDecimals>
   <padWithZeros>false</padWithZeros>
@@ -65,6 +64,7 @@
   <overridingServiceSRS>false</overridingServiceSRS>
   <skipNumberMatched>false</skipNumberMatched>
   <circularArcPresent>false</circularArcPresent>
+  <encodeMeasures>false</encodeMeasures>
   <attributes>
     <attribute>
       <name>the_geom</name>
