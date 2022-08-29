@@ -1,0 +1,189 @@
+<featureType xmlns:ns0="http://www.w3.org/2005/Atom">
+  <name>WellLocation_repr</name>
+  <nativeName>WellLocation_repr</nativeName>
+  <namespace>
+    <name>wfs_practical</name>
+    <ns0:link rel="alternate" href="http://localhost:8080/geoserver/rest/namespaces/wfs_practical.xml" type="application/xml" />
+  </namespace>
+  <title>WellLocation_repr</title>
+  <keywords>
+    <string>WellLocation_repr</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS["WGS 84 / UTM zone 44N", 
+  GEOGCS["WGS 84", 
+    DATUM["World Geodetic System 1984", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      AUTHORITY["EPSG","6326"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4326"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", 81.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["scale_factor", 0.9996], 
+  PARAMETER["false_easting", 500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","32644"]]</nativeCRS>
+  <srs>EPSG:32644</srs>
+  <nativeBoundingBox>
+    <minx>-180</minx>
+    <maxx>180</maxx>
+    <miny>-90</miny>
+    <maxy>90</maxy>
+    <crs class="projected">EPSG:32644</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>74.58169775858954</minx>
+    <maxx>80.07837877388393</maxx>
+    <miny>29.888562638031175</miny>
+    <maxy>31.561191044244282</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <name>wfs_practical:wellpoints</name>
+    <ns0:link rel="alternate" href="http://localhost:8080/geoserver/rest/workspaces/wfs_practical/datastores/wellpoints.xml" type="application/xml" />
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <internationalTitle />
+  <internationalAbstract />
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+  <attributes>
+    <attribute>
+      <name>the_geom</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>org.locationtech.jts.geom.Point</binding>
+    </attribute>
+    <attribute>
+      <name>AREA</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>19</length>
+    </attribute>
+    <attribute>
+      <name>PERIMETER</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>19</length>
+    </attribute>
+    <attribute>
+      <name>PST_MON_WL</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Integer</binding>
+      <length>9</length>
+    </attribute>
+    <attribute>
+      <name>PST_MON__1</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Integer</binding>
+      <length>9</length>
+    </attribute>
+    <attribute>
+      <name>WELL_NO</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.String</binding>
+      <length>5</length>
+    </attribute>
+    <attribute>
+      <name>ELEVATION</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>13</length>
+    </attribute>
+    <attribute>
+      <name>DEPTH_WL</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.String</binding>
+      <length>8</length>
+    </attribute>
+    <attribute>
+      <name>WT</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.String</binding>
+      <length>8</length>
+    </attribute>
+    <attribute>
+      <name>ELEV_WGS</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>13</length>
+    </attribute>
+    <attribute>
+      <name>WT_WGS</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>13</length>
+    </attribute>
+    <attribute>
+      <name>DEPTH_WL_1</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>13</length>
+    </attribute>
+    <attribute>
+      <name>POLYGONID</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Integer</binding>
+      <length>9</length>
+    </attribute>
+    <attribute>
+      <name>SCALE</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>19</length>
+    </attribute>
+    <attribute>
+      <name>ANGLE</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>java.lang.Double</binding>
+      <length>19</length>
+    </attribute>
+  </attributes>
+</featureType>
